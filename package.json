@@ -79,6 +79,8 @@
     "prepublishOnly": "run-p build",
     "version": "is-prerelease || npm run changelog && git add CHANGELOG.md",
     "zip": "cd dist && cross-env bestzip \"./video-js-${npm_package_version}.zip\" * && cd .."
+    "prepack": "patch-package",
+    "prepublish": "run-p build",
   },
   "repository": {
     "type": "git",
